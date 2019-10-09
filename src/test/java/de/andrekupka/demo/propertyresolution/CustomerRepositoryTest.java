@@ -26,16 +26,16 @@ public class CustomerRepositoryTest {
     public void setUp() {
         Customer customer = new Customer();
         customer.setId("id");
-        customer.setCLoginId("cId");
+        customer.setcLoginId("cId");
         repository.save(customer);
     }
 
     @Test
     public void shouldReturnCustomer() {
-        Optional<Customer> actualCustomer = repository.findByCLoginId("cId");
+        Optional<Customer> actualCustomer = repository.findBycLoginId("cId");
         assertThat(actualCustomer).hasValueSatisfying(customer -> {
             assertThat(customer.getId()).isEqualTo("id");
-            assertThat(customer.getCLoginId()).isEqualTo("cId");
+            assertThat(customer.getcLoginId()).isEqualTo("cId");
         });
     }
 }

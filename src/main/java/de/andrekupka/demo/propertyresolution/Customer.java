@@ -21,11 +21,11 @@ public class Customer {
         this.id = id;
     }
 
-    public String getCLoginId() {
+    public String getcLoginId() {
         return cLoginId;
     }
 
-    public void setCLoginId(String cLoginId) {
+    public void setcLoginId(String cLoginId) {
         this.cLoginId = cLoginId;
     }
 }
